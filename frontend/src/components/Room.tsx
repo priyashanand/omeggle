@@ -1,7 +1,11 @@
+import { useSearchParams } from "react-router-dom"
+
 export const Room = () => {
+    const [searchParams, setSearchParams] = useSearchParams();
+    const name = searchParams.get('name');
     return(
         <div>
-            Room hai yaha
+            <h1>hi {name}</h1>
         </div>
     )
 }
